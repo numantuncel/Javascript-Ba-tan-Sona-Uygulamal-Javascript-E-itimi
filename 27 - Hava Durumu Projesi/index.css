@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.container {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 600px;
+  padding: 20px;
+  border-radius: 25px;
+  text-align: center;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.city {
+  width: 75%;
+  padding: 10px;
+  background: lightblue;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 10px 0px 0px 10px;
+  /*
+  yukarı sol
+  yukarı sağ
+
+  aşağı sağ
+  aşağı sol
+  
+  
+  */
+  cursor: pointer;
+}
+.cityButton {
+  width: 25%;
+  font-size: 18px;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  /*
+  yukarıdan aşağıdan
+
+  sağdan soldan
+  
+  */
+}
+
+.icon img {
+  width: 75px;
+  height: 75px;
+}
+.temparature {
+  font-size: 38px;
+  margin: 20px 0px;
+}
+.details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.details div {
+  padding: 10px 20px;
+  background: lightslategray;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  letter-spacing: 1.2px;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+
+  .details {
+    display: block;
+  }
+  .details div {
+    width: 100%;
+  }
+  .container {
+    box-shadow: none;
+    top: 500px;
+    margin-bottom: 350px;
+  }
+}

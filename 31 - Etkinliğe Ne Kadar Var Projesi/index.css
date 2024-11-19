@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: purple;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.container {
+  background-color: lavender;
+  min-width: 600px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  padding: 20px 40px;
+  border-radius: 20px;
+}
+.remainingDiv {
+  width: 500px;
+  text-align: center;
+}
+.form input {
+  width: 100%;
+}
+.form {
+  text-align: left;
+}
+input {
+  font-size: 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  outline: none;
+  margin-top: 10px;
+}
+label {
+  font-weight: bold;
+  margin-left: 10px;
+ 
+}
+
+.neon-button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #ff007f, #00d4ff, #7bff00);
+  background-size: 300%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+/* Renk geçiş efekti */
+.neon-button:hover {
+  animation: gradientShift 3s ease infinite;
+}
+
+/* Neon gölge efekti */
+.neon-button:hover {
+  box-shadow: 0 0 15px #ff007f, /* Pembe ışık gölgesi */ 0 0 25px #00d4ff,
+    /* Mavi ışık gölgesi */ 0 0 35px #7bff00; /* Yeşil ışık gölgesi */
+}
+
+/* Arka plan renginin hareketli geçişi */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.timeDiv{
+  width: 500px;
+  text-align: center;
+}
+ul{
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+li{
+  list-style-type: none;
+  font-size: 30px;
+  padding: 10px;
+}
+li span{
+  font-size: 65px;
+  color: red;
+}
+
+.complete{
+  text-align: center;
+  
+}

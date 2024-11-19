@@ -1,0 +1,33 @@
+Bu kod, `XMLHttpRequest` kullanarak bir GET isteği gönderir ve adım adım bir açıklama yapmamı istemişsin. İşte her adımın açıklaması:
+
+### 1. `const request = new XMLHttpRequest();`
+- `XMLHttpRequest` nesnesi oluşturuluyor. Bu nesne, JavaScript'in sunuculara HTTP isteği gönderip, sunucudan yanıt almasını sağlar. Bu işlemler asenkron olarak yürütülür.
+
+### 2. `request.addEventListener("readystatechange", () => { ... });`
+- `readystatechange` adlı bir olay dinleyicisi ekleniyor. Bu olay, `XMLHttpRequest` nesnesinin durumu her değiştiğinde tetiklenir.
+- Her seferinde `request.readyState` değiştiğinde bu fonksiyon çağrılacak. `readyState` farklı aşamaları belirtir:
+  - `0`: İstek henüz başlatılmadı.
+  - `1`: İstek kuruldu (`open()` çağrıldı).
+  - `2`: İstek sunucuya gönderildi (`send()` çağrıldı).
+  - `3`: İstek işleniyor, sunucudan kısmi veri alındı.
+  - `4`: İstek tamamlandı, sunucudan yanıt tamamen alındı.
+
+### 3. `if (request.readyState === 4) { ... }`
+- Burada `readyState` değerinin `4` olup olmadığı kontrol ediliyor. `4` değeri, sunucudan yanıtın tamamen alındığı anlamına gelir. Bu aşamada sunucunun yanıtı kullanılabilir hale gelir.
+
+### 4. `console.log(request.responseText)`
+- Eğer istek tamamlanmışsa (yani `readyState === 4` ise), sunucudan alınan yanıt `responseText` özelliğinde bulunur.
+- `responseText`, sunucudan dönen veriyi düz metin olarak içerir. Genellikle bu metin bir JSON formatında olur.
+- `console.log` ile bu yanıt tarayıcı konsoluna yazdırılır.
+
+### 5. `request.open("GET", "https://jsonplaceholder.typicode.com/todos");`
+- `open()` metodu, bir HTTP isteği yapılandırır. Bu kodda:
+  - İlk parametre `"GET"` HTTP metodunu belirtir. `GET`, sunucudan veri almak için kullanılır.
+  - İkinci parametre, isteğin gönderileceği URL'dir. Burada `https://jsonplaceholder.typicode.com/todos` API'sine istek yapılıyor.
+
+### 6. `request.send();`
+- `send()` metodu, yapılandırılan isteği sunucuya gönderir.
+
+Bu adımlar sonucunda, JSONPlaceholder'dan yapılacak istek tamamlandığında tarayıcı konsolunda sunucudan alınan yanıt (JSON formatında) yazdırılır.
+
+Sorun olursa veya başka detaylar istersen, sormaktan çekinme!

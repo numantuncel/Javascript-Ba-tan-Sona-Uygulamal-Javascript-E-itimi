@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taş Kağıt Makas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- j query  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+   
+    <div class="gameContainer">
+        <div class="header">
+            <h1>Taş Kağıt Makas Oyunu
+            </h1>
+        </div>
+        <h2>Can Boz <span class="choice" id="playerTurn"></span> - Skor: <span id="playerScore"></span> </h2>
+        <div class="playerContainer" id="player">
+            <i class="icon fa-regular fa-hand-back-fist" id="playerRock" title="Taş" onclick="select('rock')"></i>
+            <i class="icon fa-regular fa-hand" title="Kağıt" id="playerPaper" onclick="select('paper')"></i>
+            <i class="icon fa-regular fa-hand-scissors" title="Makas" id="playerScissors" onclick="select('scissors')"></i>
+        </div>
+
+        <h2>Osman <span class="choice" id="computerTurn"></span> - Skor: <span id="computerScore"></span> </h2>
+        <div class="playerContainer" id="computer">
+            <i class="icon fa-regular fa-hand-back-fist" title="Taş" id="computerRock"></i>
+            <i class="icon fa-regular fa-hand" title="Kağıt" id="computerPaper"></i>
+            <i class="icon fa-regular fa-hand-scissors" title="Makas" id="computerScissors"></i>
+        </div>
+
+        <div class="resetContainer">
+            <i class="resetIcon fa-solid fa-rotate" title="Sıfırla" onclick="resetAll()"></i>
+        </div>
+        <div class="resultContainer">
+            <h3 class="resultText" id="resultText"></h3>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/e9a187851c.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="confetti.js"></script>
+</body>
+
+</html>

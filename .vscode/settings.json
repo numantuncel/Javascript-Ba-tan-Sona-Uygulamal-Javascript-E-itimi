@@ -1,0 +1,9 @@
+{
+    "liveServer.settings.port": 5501,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "css": "css"
+    },
+    "editor.formatOnType": true,
+    "editor.autoClosingBrackets": "always"
+}

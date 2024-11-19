@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Projesi</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="shortcut icon" href="">
+  </head>
+
+  <body>
+    <div class="mainDiv">
+      <h1 class="title">Kayıt Formu</h1>
+      <form id="form" novalidate><!--
+        HTML'de novalidate özelliği, form gönderimi sırasında tarayıcının varsayılan form doğrulama işlemlerini devre dışı bırakır. 
+        Normalde, bir form gönderildiğinde tarayıcı, doldurulması gereken alanlar, doğru formatta girilmiş e-posta adresleri gibi şeyleri kontrol eder.
+         Ancak form etiketi içinde novalidate özelliği kullanıldığında bu doğrulamalar yapılmaz.
+        -->
+        <div class="form-group">
+          <label>Ad</label>
+          <input type="text" id="name" name="name" placeholder="Adınızı Giriniz..." required minlength="3" maxlength="20"><!--required: Girdi alanının zorunlu (mutlaka doldurulması gereken) olduğunu tanımlar.-->
+        </div>
+        <div class="form-group">
+          <label>Soyad</label>
+          <input type="text" id="surname" name="surname" placeholder="Soyadınızı Giriniz..." required minlength="3" maxlength="20">
+        </div>
+        <div class="form-group">
+          <label>Email Adresi</label>
+          <input type="email" id="email" name="email" placeholder="example123@gmail.com" required>
+        </div>
+        <div class="form-group">
+          <label>Telefon Numarası</label>
+          <input type="tel" id="phone" name="phone" placeholder="555-555-5555" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </div>
+        <div class="form-group">
+          <label>Şifre</label>
+          <input type="password" id="password" name="password" placeholder="Şifrenizi Giriniz..." required
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+        </div>
+        <div class="form-group">
+          <label>Şifre Tekrar</label>
+          <input pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" type="password" id="repassword" name="repassword" placeholder="Şifrenizi Tekrar..." required>
+        </div>
+        <div class="form-group">
+          <label>Adres</label>
+          <textarea type="text" id="adres" name="adres" placeholder="Adres Giriniz..." rows="5" required></textarea>
+        </div>
+        <button type="submit">Kaydol</button>
+      </form>
+      
+      <div class="alertMessage">
+        <h3 id="alertTitle">Lütfen Tüm Alanları Doldurunuz!</h3>
+      </div>
+
+    </div>
+    <script
+      src="https://kit.fontawesome.com/e9a187851c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<!--
+
+HTML'de controls özelliği, medya öğeleri için 
+(örn. <audio> ve <video> elementleri) kullanılır ve tarayıcıya 
+  medya oynatma, durdurma, ses ayarı gibi kontrolleri kullanıcıya 
+  göstermesini söyler. Yani, medya öğelerine bu özellik eklendiğinde, 
+  tarayıcı otomatik olarak varsayılan oynatma kontrollerini sağlar.
+
+ readonly ile içine veri girilmez-->

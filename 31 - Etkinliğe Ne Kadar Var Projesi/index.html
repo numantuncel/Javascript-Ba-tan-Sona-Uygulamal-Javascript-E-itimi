@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etkinliğe Ne Kadar Var Projesi</title>
+    <link rel="stylesheet" href="index.css" />
+    <!-- fav icon hatası  -->
+    <link rel="shortcut icon" href="" />
+    <!-- CSS -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery DateTime Picker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+    
+    <!-- jQuery DateTime Picker JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+   <!-- Moment.js kütüphanesi -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+  
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="remainingDiv" id="remainingDiv">
+        <h1>Etkinliğe Ne Kadar Var</h1>
+        <form class="form" id="remningForm">
+          <label>Tarih Seçiniz</label>
+          <input id="datePicker" name="date" type="text" placeholder="01/01/2024"/>
+          <button class="neon-button">Hesapla</button>
+        </form>
+      </div>
+      <div class="timeDiv" id="timeDiv" hidden>
+        <h1>Kalan Süre</h1>
+        <ul>
+          <li><span>10</span> Gün</li>
+          <li><span>10</span> Saat</li>
+          <li><span>10</span> Dakika</li>
+          <li><span>10</span> Saniye</li>
+        </ul>
+        <button class="neon-button reset-bottom">Sıfırla</button>
+      </div>
+
+      <div class="complete" id="complete" hidden>
+        <h1>Vakit Geldi</h1>
+        <button id="complate-button" clyza çektiass="neon-button" type="submit">
+          Yeniden Hesapla
+        </button>
+      </div>
+    </div>
+    
+
+    <script
+      src="https://kit.fontawesome.com/e9a187851c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js"></script>
+    <!-- jQuery 3.7.0 (en son sürüm olabilir, güncellemeleri kontrol et) -->
+  </body>
+</html>
+
+<!--
+
+HTML'de controls özelliği, medya öğeleri için 
+(örn. <audio> ve <video> elementleri) kullanılır ve tarayıcıya 
+  medya oynatma, durdurma, ses ayarı gibi kontrolleri kullanıcıya 
+  göstermesini söyler. Yani, medya öğelerine bu özellik eklendiğinde, 
+  tarayıcı otomatik olarak varsayılan oynatma kontrollerini sağlar.
+
+ readonly ile içine veri girilmez-->

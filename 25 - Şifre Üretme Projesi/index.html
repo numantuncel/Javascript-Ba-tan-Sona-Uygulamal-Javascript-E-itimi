@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Şifre Üretme Projesi</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div class="passwordContainer">
+      <h1>Şifre Üretici</h1>
+      <div class="inputContainer">
+        <input
+          type="text"
+          placeholder="Yeni Şifre"
+          readonly
+        /><!-- readonly ile içine veri girilmez-->
+        <i class="fa-solid fa-copy fa-2xl copyIcon"></i>
+      </div>
+      <span class="copy copied">Copied</span>
+      <button class="passwordButton">Üret</button>
+    </div>
+    <div class="alertContainer">
+      Şifre Kopyalandı!
+    </div>
+    <script
+      src="https://kit.fontawesome.com/e9a187851c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<!--
+
+HTML'de controls özelliği, medya öğeleri için 
+(örn. <audio> ve <video> elementleri) kullanılır ve tarayıcıya 
+  medya oynatma, durdurma, ses ayarı gibi kontrolleri kullanıcıya 
+  göstermesini söyler. Yani, medya öğelerine bu özellik eklendiğinde, 
+  tarayıcı otomatik olarak varsayılan oynatma kontrollerini sağlar.
+
+ readonly ile içine veri girilmez-->

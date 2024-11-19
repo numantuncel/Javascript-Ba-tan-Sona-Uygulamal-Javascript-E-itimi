@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    /*padding width e dahil edilmez */
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    /*scrol ortadan kalkar*/
+    position: relative;
+    background: gray;
+}
+
+.fa-bars {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 35px;
+    cursor: pointer;
+    position: fixed;
+    color: coral;
+}
+
+.sidebar {
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 450px;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+
+}
+.showSidebar{
+    transform: translateX(0);
+}
+
+.sidebarHeader {
+    text-align: right;
+    padding: 16px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu{
+    list-style-type: none;
+    padding: 0;
+}
+.menu a {
+    color: gray;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 16px 24px;
+    display: block;/*tüm kendi genişliğini kaplaması için*/
+}
+.menu a:hover{
+    background: coral;
+    color: white;
+    transition: all 0.3s;
+    padding-left: 40px;
+}
+@media (max-width:768px) {
+    .sidebar{
+        width: 100%;
+    }
+}

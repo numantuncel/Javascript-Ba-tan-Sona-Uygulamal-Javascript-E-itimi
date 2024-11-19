@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sıcaklık Değeri Hesaplayıcı</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Hava Sıcaklığı Çevirici</h1>
+        <div class="tempDiv">
+            <label>Celsius:</label>
+            <input onchange="calculateTemp(event)" class="tempInput" type="number" name="celsius" id="celsius" placeholder="hava kaç derece ?">
+        </div>
+        <div class="tempDiv">
+            <label>Fahrenheit:</label>
+            <input onchange="calculateTemp(event)" class="tempInput" type="number" name="fahrenheit" id="fahrenheit" placeholder="hava kaç derece ?">
+        </div>
+        <div class="tempDiv">
+            <label>Kelvin:</label>
+            <input onchange="calculateTemp(event)" class="tempInput" type="number" name="kelvin" id="kelvin" placeholder="hava kaç derece ?">
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/e9a187851c.js" crossorigin="anonymous"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

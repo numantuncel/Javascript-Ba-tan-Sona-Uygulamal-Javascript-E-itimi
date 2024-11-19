@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  color: white;
+  margin: 0;
+}
+h1 {
+  color: black;
+}
+.header {
+  margin: 10px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+.drag-container {
+  margin: 20px;
+}
+.drag-item-list {
+ min-height: 50px;
+}
+.drag-list {
+  display: flex;
+}
+.drag-column {
+  /* 1 değeri, diğer öğelerle eşit şekilde alan paylaşacağı anlamına gelir. */
+  flex: 1;
+  margin: 0px 10px;
+  background-color: lightgray;
+  border-radius: 10px;
+  height: fit-content;
+  transition: transform 0.3s ease;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.app-title {
+  text-align: center;
+}
+.drag-item {
+  border-radius: 10px;
+  background-color: black;
+  padding: 8px;
+  margin: 10px;
+  cursor: pointer;
+  line-height: 24px;
+}
+.todo-column .header,
+.todo-column .update {
+  background-color: red;
+}
+.progress-column .header,
+.progress-column .update {
+  background-color: lightblue;
+}
+.done-column .header,
+.done-column .update {
+  background-color: lightgreen;
+}
+.header h1 {
+  font-size: 1.25rem;
+}
+.add-btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+.add-btn {
+  background-color: coral;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+.add-btn:hover {
+  background-color: white;
+  color: black;
+}
+.plus-span {
+  font-size: 20px;
+}
+.update {
+  display: none;
+}
+.add-container {
+  min-height: 100px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  
+  display: none;
+}
+.add-item {
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  color: black;
+  margin: 5px auto;
+  padding: 8px;
+}
+.add-item:focus {
+  outline: none;
+}
+
+.over{
+  padding: 50px;
+}

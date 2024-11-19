@@ -1,0 +1,12 @@
+// yapılacaklar listesi uygulaması =>
+
+* koleksiyonlarda foreach kullanılmaz bunun yerine not liste çevirmeliyiz
+   >  Array.from(list.children) bu şekilde not liste çevri
+
+Karakter Sayacı Projesi
+   <!-- Span inline olduğu için p etiketinin yanına hizalanır-->
+
+   js objesi jsona çevirmek için JSON.stringfy()
+
+
+   jsonu js ye çevirmek için JSON.parse()

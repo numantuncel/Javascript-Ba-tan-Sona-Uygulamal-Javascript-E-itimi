@@ -1,0 +1,11 @@
+Asynchronous Nedir?
+Asynchronous programming, bir programın işlemlerini asynchron (eşzamansız) olarak yürütebilme yeteneğini ifade eden bir programlama yaklaşımıdır.
+ Geleneksel synchron programming farklı olarak, asynchron programming sayesinde bir işlem tamamlanırken 
+ diğer işlemlerin program tarafından beklenmesi gerekmez. Bu yaklaşım, özellikle uzun süren işlemleri (örn: web sayfasının veri çekme işlemi) daha 
+ verimli bir şekilde yönetme konusunda önemli avantajlar sunar. Bir işlemin tamamlanmasını beklemek yerine, programın diğer işlemleri hızlı bir
+  şekilde yürütmesine olanak tanır. Bu sayede, kullanıcı arayüzleri daha hızlı ve akıcı bir deneyim sunar. 
+  Ayrıca, bloklama olayını aşarak programın sürekli çalışmasını sağlar. Synchronous programming’in tam tersi olarak, 
+  asynchronous programming, programın beklemesini minimize ederek daha dinamik ve etkili bir çalışma şekli sunar. Örneğin, 
+  diyelim ki, bir web sitesinde dolaşıyorsunuz. Bu sırada, bir butona tıkladığınızda veri çekilen bir işlem başlattınız. 
+  Eğer bu işlem asenkron olmasaydı, sayfa bloklanır ve arayüzü kullanamazdınız.
+ Ancak asenkron programlama, hala veri çekiliyor olsa bile başka işlemler yapmanıza olanak tanır.

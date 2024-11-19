@@ -1,0 +1,15 @@
+`debugger` ifadesi, JavaScript'te kodun belirli bir noktasında durmasını ve o anda neler olduğunu incelemenizi sağlayan bir araçtır.
+ Bu, genellikle geliştiricilerin kodda hata ayıklamak, değişkenlerin değerlerini kontrol etmek veya kodun nasıl çalıştığını adım adım görmek için kullanılır.
+
+### `debugger` nedir?
+- `debugger;` satırına ulaşıldığında, tarayıcının geliştirici araçları açık değilse bile durdurma noktası (breakpoint) oluşturur ve yürütmeyi durdurur.
+- Bu noktada, kodu adım adım inceleyebilir, değişken değerlerini görebilir, çağrı yığınını (call stack) izleyebilir ve kodun akışını anlayabilirsiniz.
+
+### `Pending` nedir?
+- `Pending`, bir **Promise**'in henüz sonlanmadığını (ne çözülmediğini ne de reddedilmediğini) gösteren bir durumdur.
+- Senin örneğinde `await` kullandığın için, `fetch` fonksiyonu asenkron bir işlem başlatıyor ve bir **Promise** döndürüyor.
+ Bu **Promise**, işlem tamamlanana kadar `pending` durumunda kalıyor.
+- Yani, API'den yanıt gelene kadar Promise "bekliyor" (pending). Sonrasında işlem tamamlandığında 
+Promise ya "resolve" (başarıyla tamamlandı) ya da "reject" (bir hata oluştu) durumuna geçer.
+
+Özetle, `debugger;` kullanarak kodunu durdurup inceleyebilir, asenkron işlemler sırasında pending olan Promiseleri takip edebilirsin.

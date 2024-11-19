@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #673aaa;
+}
+
+h1 {
+  text-align: center;
+  background: black;
+  color: white;
+  width: 300px;
+  margin: 20px auto;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+.show-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  width: 500px;
+  animation: modelopen 1s;
+}
+
+@keyframes modelopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  background: #673aaa;
+  color: white;
+  align-items: center;
+  padding: 15px;
+}
+.close-icon {
+  cursor: pointer;
+  font-size: 24px;
+}
+.modal-content {
+  padding: 20px;
+}
+.form-group {
+  height: 50px;
+}
+.form-label {
+  color: #673aaa;
+}
+.form-input {
+  width: 100%;
+  padding: 5px;
+  border: 2px solid #673aaa;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background: #673aaa;
+  border: none;
+  height: 30px;
+  width: 100px;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  /* with taşarsa aşağı atar  */
+}
+.item {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: right;
+  margin: 10px;
+}
+
+.itemA{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.itemA:hover{
+  text-decoration: underline;
+}
+.fa-times:hover{
+  cursor: pointer;
+}
+.infoDiv {
+ margin-top: 20px;
+ margin-right: 20px;
+}

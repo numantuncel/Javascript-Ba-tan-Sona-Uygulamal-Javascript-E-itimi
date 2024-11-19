@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hava Durumu Projesi</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Hava Durumu</h1>
+      <form id="form">
+        <input type="text" placeholder="Şehrinizi Giriniz" id="city" class="city">
+        <button class="cityButton">Hava Nasıl</button>
+      </form>
+      <div id="weather">
+        <div class="icon" id="icon">
+          
+        </div>
+        <div class="temparature" id="temparature"></div>
+
+        <div class="desctription" id="desctription"></div>
+        
+        
+        <div class="details" id="details"></div>
+
+
+      </div>
+    </div>
+
+
+
+    <script
+      src="https://kit.fontawesome.com/e9a187851c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<!--
+
+HTML'de controls özelliği, medya öğeleri için 
+(örn. <audio> ve <video> elementleri) kullanılır ve tarayıcıya 
+  medya oynatma, durdurma, ses ayarı gibi kontrolleri kullanıcıya 
+  göstermesini söyler. Yani, medya öğelerine bu özellik eklendiğinde, 
+  tarayıcı otomatik olarak varsayılan oynatma kontrollerini sağlar.
+
+ readonly ile içine veri girilmez-->

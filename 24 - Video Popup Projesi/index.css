@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.mainContainer {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 550px;
+  border-radius: 25px;
+  padding: 30px; /* padding olmaz ise resim büyük olğu için bazı köşeleri yuvarlamaz*/
+  background: lavender;
+}
+h1 {
+  margin: 5px 0px;
+  font-weight: 500;
+}
+p{
+    margin: 15px 0px;
+}
+.resim {
+  width: 100%;
+  height: 450px;
+}
+.watchButton {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  background: blueviolet;
+  font-size: 20px;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: transform 0.3s ease;  /* Geçiş animasyonu */
+
+}
+.watchButton:hover{
+    background-color: red;
+    transform: scale(0.9);  /* %20 oranında büyüme */
+
+}
+
+.videoContainer {
+  position: fixed;
+  background: black;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+video{
+    height: 600px;
+}
+.closeIcon{
+    color: white;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+.active {
+  visibility: hidden;
+}

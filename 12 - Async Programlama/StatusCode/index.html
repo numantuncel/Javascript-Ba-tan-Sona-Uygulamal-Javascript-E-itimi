@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <h1 style="margin: 80px; font-weight: 700;">StatusCode:</h1>
+
+    <p style="margin: 80px;">HTTP yanıt durumu kodları<br>
+        HTTP yanıt durumu kodları, belirli bir HTTP isteğinin başarıyla tamamlanıp tamamlanmadığını gösterir. Yanıtlar beş sınıfta gruplandırılır:
+        <br>
+        Bilgilendirici yanıtlar ( 100– 199)
+        Başarılı yanıtlar ( 200– 299)
+        Yönlendirme mesajları ( 300– 399)
+        İstemci hata yanıtları ( 400– 499)
+        Sunucu hatası yanıtları ( 500– 599)
+        Aşağıda listelenen durum kodları RFC 9110 tarafından tanımlanmıştır .
+        <br><br>
+        Not: Eğer bu listede olmayan bir yanıt alırsanız , bu yanıt standart dışıdır ve muhtemelen sunucunun yazılımına özeldir.
+        <br>
+        Bilgi yanıtları
+        100 Continue
+        Bu ara yanıt, istemcinin isteğe devam etmesi gerektiğini veya istek zaten tamamlanmışsa yanıtı yok sayması gerektiğini belirtir.
+        <br> <br><br>
+        101 Switching Protocols
+        Bu kod, istemciden gelen bir istek başlığına yanıt olarak gönderilir Upgradeve sunucunun hangi protokole geçtiğini belirtir.
+        <br> <br><br>
+        102 Processing( WebDAV )
+        Bu kod, sunucunun isteği aldığını ve işlediğini ancak henüz bir yanıt bulunmadığını belirtir.
+        <br> <br><br>
+        103 Early Hints
+        Bu durum kodu öncelikle başlıkla birlikte kullanılmak üzere tasarlanmıştır ve sunucu bir yanıt hazırlarken veya sayfanın kaynaklara ihtiyaç duyacağı bir kaynağa ön bağlantı kurarkenLink kullanıcı aracısının kaynakları önceden yüklemesine izin verir.
+        <br> <br><br>
+        Başarılı yanıtlar
+        200 OK
+        İstek başarılı oldu. "Başarılı"nın sonuç anlamı HTTP yöntemine bağlıdır:
+        <br> <br><br>
+        GET: Kaynak alındı ​​ve mesaj gövdesine iletildi.
+        HEAD: Gösterim başlıkları herhangi bir mesaj gövdesi olmaksızın yanıta dahil edilir.
+        PUTveya POST: Eylemin sonucunu açıklayan kaynak, mesaj gövdesinde iletilir.
+        TRACE: Mesaj gövdesi, sunucu tarafından alınan istek mesajını içerir.
+        201 Created
+        POSTİstek başarılı oldu ve sonuç olarak yeni bir kaynak oluşturuldu. Bu genellikle isteklerden veya bazı isteklerden sonra gönderilen yanıttır PUT.
+        <br> <br><br>
+        202 Accepted
+        İstek alındı ​​ancak henüz işlem yapılmadı. HTTP'de isteğin sonucunu belirten asenkron bir yanıt göndermenin bir yolu olmadığından, bağlayıcı değildir. Başka bir işlem veya sunucunun isteği işlediği durumlar veya toplu işleme için tasarlanmıştır.
+        <br> <br><br>
+        203 Non-Authoritative Information
+        Bu yanıt kodu, döndürülen meta verinin orijinal sunucudan elde edilenle tam olarak aynı olmadığı, ancak yerel veya üçüncü taraf bir kopyadan toplandığı anlamına gelir. Bu çoğunlukla başka bir kaynağın aynaları veya yedekleri için kullanılır. Bu özel durum haricinde, yanıt 200 OKbu duruma tercih edilir.
+        <br> <br><br>
+        204 No Content
+        Bu istek için gönderilecek içerik yok, ancak başlıklar yararlı olabilir. Kullanıcı aracısı bu kaynak için önbelleğe alınmış başlıklarını yenileriyle güncelleyebilir.
+        <br> <br><br>
+        205 Reset Content
+        Kullanıcı aracısına bu isteği gönderen belgeyi sıfırlamasını söyler.
+        <br>
+        206 Partial Content
+        RangeBu yanıt kodu , istemciden yalnızca bir kaynağın bir kısmını istemek için başlık gönderildiğinde kullanılır .
+        <br> <br><br>
+        207 Multi-Status( WebDAV )
+        Birden fazla durum kodunun uygun olabileceği durumlar için birden fazla kaynak hakkında bilgi iletir.
+        <br>
+        208 Already Reported( WebDAV )
+        <dav:propstat>Aynı koleksiyona ait birden fazla bağlamanın dahili üyelerinin tekrar tekrar sıralanmasını önlemek için bir yanıt öğesinin içinde kullanılır .
+            <br>
+        226 IM Used( HTTP Delta kodlaması )
+        Sunucu, GETkaynak için bir isteği yerine getirmiştir ve yanıt, geçerli örneğe uygulanan bir veya daha fazla örnek düzenlemesinin sonucunun bir gösterimidir.
+        <br> <br><br>
+        Yönlendirme mesajları
+        300 Multiple Choices
+        İstekte birden fazla olası yanıt var. Kullanıcı aracısı veya kullanıcı bunlardan birini seçmelidir. (Yanıtlardan birini seçmenin standart bir yolu yoktur, ancak kullanıcının seçebilmesi için olasılıklara HTML bağlantıları önerilir.)
+        <br> <br><br>
+        301 Moved Permanently
+        İstenen kaynağın URL'si kalıcı olarak değiştirildi. Yeni URL yanıtta verildi.
+        <br> <br><br>
+        302 Found
+        Bu yanıt kodu, talep edilen kaynağın URI'sinin geçici olarak değiştirildiği anlamına gelir . URI'de gelecekte daha fazla değişiklik yapılabilir. Bu nedenle, istemci gelecekteki isteklerde aynı URI'yi kullanmalıdır.
+        <br> <br><br>
+        303 See Other
+        Sunucu, istemciye talep edilen kaynağı başka bir URI'de GET isteğiyle almasını yönlendirmek için bu yanıtı gönderdi.
+        <br> <br><br>
+        304 Not Modified
+        Bu, önbelleğe alma amaçları için kullanılır. İstemciye yanıtın değiştirilmediğini söyler, böylece istemci yanıtın aynı önbelleğe alınmış sürümünü kullanmaya devam edebilir.
+        <br> <br><br>
+        305 Use Proxy Kullanım dışı bırakıldı
+        HTTP spesifikasyonunun önceki bir sürümünde, istenen bir yanıtın bir proxy tarafından erişilmesi gerektiğini belirtmek için tanımlanmıştır. Bir proxy'nin bant içi yapılandırmasıyla ilgili güvenlik endişeleri nedeniyle kullanım dışı bırakılmıştır.
+        <br> <br><br>
+        306 unused
+        Bu yanıt kodu artık kullanılmıyor; sadece rezerve edildi. HTTP/1.1 spesifikasyonunun önceki bir sürümünde kullanıldı.
+        <br> <br><br>
+        307 Temporary Redirect
+        Sunucu, istemciyi önceki istekte kullanılan yöntemle aynı yöntemle başka bir URI'de istenen kaynağı almaya yönlendirmek için bu yanıtı gönderir. Bu, 302 FoundHTTP yanıt koduyla aynı semantiği kullanır, ancak kullanıcı aracısının kullanılan HTTP yöntemini değiştirmemesi gerekirPOST : ilk istekte a kullanılmışsa, POSTikinci istekte a kullanılmalıdır.
+        <br>
+        308 Permanent Redirect
+        Bu, kaynağın artık Location:HTTP Yanıt başlığı tarafından belirtilen başka bir URI'de kalıcı olarak bulunduğu anlamına gelir. Bu, HTTP yanıt koduyla aynı semantiği taşır 301 Moved Permanently, ancak kullanıcı aracısının kullanılan HTTP yöntemini değiştirmemesi gerekirPOST : ilk istekte a kullanılmışsa, POSTikinci istekte a kullanılmalıdır.
+        <br> <br><br>
+        İstemci hata yanıtları
+        400 Bad Request
+        Sunucu, istemci hatası olarak algılanan bir durum nedeniyle (örneğin, hatalı biçimlendirilmiş istek sözdizimi, geçersiz istek mesajı çerçevesi veya yanıltıcı istek yönlendirmesi) isteği işleme koyamıyor veya işlemek istemiyor.
+        <br> <br><br>
+        401 Unauthorized
+        HTTP standardı "yetkisiz"i belirtse de, semantik olarak bu yanıt "kimliği doğrulanmamış" anlamına gelir. Yani, istemcinin istenen yanıtı almak için kendini doğrulaması gerekir.
+        <br> <br><br>
+        402 Payment Required Deneysel
+        Bu yanıt kodu gelecekteki kullanım için ayrılmıştır. Bu kodu oluşturmanın ilk amacı dijital ödeme sistemleri için kullanmaktı, ancak bu durum kodu çok nadiren kullanılır ve standart bir kural yoktur.
+        <br> <br><br>
+        403 Forbidden
+        İstemcinin içeriğe erişim hakları yoktur; yani yetkisizdir, bu nedenle sunucu istenen kaynağı vermeyi reddeder. 401 Unauthorizedİstemcinin kimliği sunucu tarafından bilinir.
+        <br><br>
+        404 Not Found
+        Sunucu istenen kaynağı bulamıyor. Tarayıcıda bu, URL'nin tanınmadığı anlamına gelir. Bir API'de bu, uç noktanın geçerli olduğu ancak kaynağın kendisinin var olmadığı anlamına da gelebilir. Sunucular ayrıca, 403 Forbiddenyetkisiz bir istemciden bir kaynağın varlığını gizlemek için bu yanıtı gönderebilir. Bu yanıt kodu, web'de sık sık görülmesi nedeniyle muhtemelen en iyi bilinenidir.
+        <br><br>
+        405 Method Not Allowed
+        İstek yöntemi sunucu tarafından biliniyor ancak hedef kaynak tarafından desteklenmiyor. Örneğin, bir API DELETEbir kaynağı kaldırmak için çağrıya izin vermeyebilir.
+        <br><br>
+        406 Not Acceptable
+        Bu yanıt, web sunucusunun sunucu odaklı içerik pazarlığı gerçekleştirdikten sonra kullanıcı aracısı tarafından verilen ölçütlere uyan herhangi bir içerik bulamaması durumunda gönderilir .
+        <br><br>
+        407 Proxy Authentication Required
+        Bu, benzerdir 401 Unauthorizedancak kimlik doğrulamanın bir proxy tarafından yapılması gerekir.
+        <br><br>
+        408 Request Timeout
+        Bu yanıt, bazı sunucular tarafından, istemci tarafından önceden herhangi bir istekte bulunulmadan bile, boşta olan bir bağlantıda gönderilir. Bu, sunucunun bu kullanılmayan bağlantıyı kapatmak istediği anlamına gelir. Bu yanıt, Chrome, Firefox 27+ veya IE9 gibi bazı tarayıcılar, sörfü hızlandırmak için HTTP ön bağlantı mekanizmalarını kullandığından çok daha fazla kullanılır. Ayrıca bazı sunucuların bu mesajı göndermeden bağlantıyı kapattığını unutmayın.
+        <br><br>
+        409 Conflict
+        Bu yanıt, bir istek sunucunun geçerli durumuyla çakıştığında gönderilir.
+        <br><br>
+        410 Gone
+        Bu yanıt, talep edilen içerik sunucudan kalıcı olarak silindiğinde ve yönlendirme adresi olmadığında gönderilir. İstemcilerin önbelleklerini ve kaynağa olan bağlantıları kaldırmaları beklenir. HTTP spesifikasyonu, bu durum kodunun "sınırlı süreli, tanıtım hizmetleri" için kullanılmasını amaçlar. API'ler, bu durum koduyla silinen kaynakları belirtmek zorunda hissetmemelidir.
+        <br><br>
+        411 Length Required
+        Content-LengthSunucu , başlık alanının tanımlanmamış olması ve sunucunun bunu gerektirmesi nedeniyle isteği reddetti .
+        <br><br>
+        412 Precondition Failed
+        İstemci, sunucunun karşılamadığı ön koşulları başlıklarında belirtmiştir.
+        <br><br>
+        413 Payload Too Large
+        İstek varlığı sunucu tarafından tanımlanan sınırlardan daha büyük. Sunucu bağlantıyı kapatabilir veya bir Retry-Afterbaşlık alanı döndürebilir.
+        <br><br>
+        414 URI Too Long
+        İstemcinin talep ettiği URI, sunucunun yorumlamaya istekli olduğundan daha uzun.
+        <br><br>
+        415 Unsupported Media Type
+        İstenen verinin medya biçimi sunucu tarafından desteklenmiyor, bu nedenle sunucu isteği reddediyor.
+        <br><br>
+        416 Range Not Satisfiable
+        İstekteki başlık alanı tarafından belirtilen aralık Rangekarşılanamıyor. Aralığın hedef URI'nin verilerinin boyutunun dışında olması mümkündür.
+        <br><br>
+        417 Expectation Failed
+        Bu yanıt kodu, istek başlık alanında belirtilen beklentinin Expectsunucu tarafından karşılanamayacağı anlamına gelir.
+        <br><br>
+        418 I'm a teapot
+        Garson, çaydanlıkla kahve yapma girişimini reddediyor.
+        <br><br>
+        421 Misdirected Request
+        İstek, yanıt üretemeyen bir sunucuya yönlendirildi. Bu, istek URI'sinde yer alan şema ve yetki kombinasyonu için yanıt üretecek şekilde yapılandırılmamış bir sunucu tarafından gönderilebilir.
+        <br><br>
+        422 Unprocessable Content( WebDAV )
+        İstek iyi biçimlendirilmişti ancak anlamsal hatalar nedeniyle yerine getirilemedi.
+        <br><br>
+        423 Locked( WebDAV )
+        Erişilen kaynak kilitli.
+        <br><br>
+        424 Failed Dependency( WebDAV )
+        Önceki bir isteğin başarısız olması nedeniyle istek başarısız oldu.
+        <br><br>
+        425 Too Early Deneysel
+        Sunucunun tekrarlanabilecek bir isteği işleme koyma riskini almak istemediğini belirtir.
+        <br><br>
+        426 Upgrade Required
+        Sunucu, isteği geçerli protokolü kullanarak gerçekleştirmeyi reddeder ancak istemci farklı bir protokole yükselttikten sonra bunu yapmaya istekli olabilir. Sunucu, Upgradegerekli protokolü/protokolleri belirtmek için 426 yanıtında bir başlık gönderir.
+        <br><br>
+        428 Precondition Required
+        Kaynak sunucu, isteğin koşullu olmasını gerektirir. Bu yanıt, bir istemcinin GETkaynağın durumunu alıp değiştirdiği ve PUTsunucuya geri gönderdiği, bu arada üçüncü bir tarafın sunucudaki durumu değiştirdiği ve bir çakışmaya yol açtığı 'kayıp güncelleme' sorununu önlemek için tasarlanmıştır.
+        <br><br>
+        429 Too Many Requests
+        Kullanıcı belirli bir zaman diliminde çok fazla istek gönderdi ("oran sınırlaması").
+        <br><br>
+        431 Request Header Fields Too Large
+        Sunucu, başlık alanları çok büyük olduğu için isteği işlemek istemiyor. İstek, istek başlık alanlarının boyutu küçültüldükten sonra yeniden gönderilebilir.
+        <br><br>
+        451 Unavailable For Legal Reasons
+        Kullanıcı aracısı, hükümet tarafından sansürlenen bir web sayfası gibi yasal olarak sağlanamayan bir kaynak talep etti.
+        <br><br>
+        Sunucu hatası yanıtları
+        500 Internal Server Error
+        Sunucu, nasıl başa çıkacağını bilmediği bir durumla karşılaştı.
+        <br><br>
+        501 Not Implemented
+        İstek yöntemi sunucu tarafından desteklenmiyor ve işlenemiyor. Sunucuların desteklemesi gereken (ve bu nedenle bu kodu döndürmemesi gereken) tek yöntemler GETve HEAD.
+        <br><br>
+        502 Bad Gateway
+        Bu hata yanıtı, sunucunun isteği işlemek için gereken yanıtı almak üzere bir ağ geçidi olarak çalışırken geçersiz bir yanıt aldığı anlamına gelir.
+        <br><br>
+        503 Service Unavailable
+        Sunucu isteği işlemeye hazır değil. Yaygın nedenler bakım için kapalı olan veya aşırı yüklenmiş bir sunucudur. Bu yanıtla birlikte, sorunu açıklayan kullanıcı dostu bir sayfanın gönderilmesi gerektiğini unutmayın. Bu yanıt geçici koşullar için kullanılmalı ve HTTP Retry-Afterbaşlığı mümkünse hizmetin kurtarılmasından önceki tahmini süreyi içermelidir. Web yöneticisi ayrıca bu yanıtla birlikte gönderilen önbelleğe almayla ilgili başlıklara da dikkat etmelidir çünkü bu geçici koşul yanıtları genellikle önbelleğe alınmamalıdır.
+        <br><br>
+        504 Gateway Timeout
+        Bu hata yanıtı, sunucunun bir ağ geçidi gibi davrandığı ve zamanında yanıt alamadığında verilir.
+        <br><br>
+        505 HTTP Version Not Supported
+        İstekte kullanılan HTTP sürümü sunucu tarafından desteklenmiyor.
+        <br><br>
+        506 Variant Also Negotiates
+        Sunucuda dahili bir yapılandırma hatası var: Seçilen değişken kaynak, şeffaf içerik müzakeresine girecek şekilde yapılandırılmış ve bu nedenle müzakere sürecinde uygun bir son nokta değil.
+        <br><br>
+        507 Insufficient Storage( WebDAV )
+        Sunucu isteği başarıyla tamamlamak için gereken gösterimi depolayamadığından yöntem kaynak üzerinde gerçekleştirilemedi.
+        <br><br>
+        508 Loop Detected( WebDAV )
+        Sunucu isteği işlerken sonsuz bir döngü tespit etti.
+        <br><br>
+        510 Not Extended
+        Sunucunun isteği yerine getirebilmesi için isteğe ilişkin daha fazla uzantıya ihtiyaç vardır.
+        <br><br>
+        511 Network Authentication Required
+        İstemcinin ağ erişimi elde etmek için kimlik doğrulaması yapması gerektiğini belirtir.</p>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/e9a187851c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    /*padding width e dahil edilmez */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container{
+    text-align: center;
+    padding: 10px;
+    background: crimson;
+    color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.currencyContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+select{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none; /*tıklanınca oluşan borderi kaldırır*/
+}
+input{
+    font-size: 25px;
+    text-align: right;
+    border: none;
+    background: transparent;
+    color: white;
+
+}
+span{
+    font-size: 25px;
+}
+
+input:focus,select:focus{
+    outline: none;
+}
+
+.exchangeRate{
+    font-weight: 600;
+}
